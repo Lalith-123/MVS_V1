@@ -2,16 +2,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #2F4F4F; /* Dark Slate */
+    padding: 0px 50px;
+    background-color: #330708; /* Dark Slate */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFFFFF; /* White */
-    letter-spacing: 1.5px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
   }
   
   .menu {

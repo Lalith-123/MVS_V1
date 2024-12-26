@@ -1,128 +1,294 @@
 .ContactPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    min-height: 100vh;
-  }
-  
-  /* .ContactHeading {
+  background-color: #330708;
+  min-height: 60vh;
+}
+
+.ContactPage_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px 0px 0px;
+  /* background-color: #f9f9f9; */
+  width: 90%;
+  margin: auto;
+}
+
+/* .ContactHeading {
     font-size: 36px;
     color: #2F4F4F;
     font-family: 'Playfair Display', serif;
     margin-bottom: 40px;
   } */
-  .ContactHeading {
-    font-size: 36px;
-    color: #2F4F4F; /* Dark Slate */
-    font-family: 'Playfair Display', serif;
-    position: relative; /* This makes sure the ::after is positioned relative to the heading */
-    text-align: center;
-    margin-bottom: 50px; /* Add some space below the heading to avoid content overlap */
+.ContactHeading {
+  font-size: 36px;
+  color: #ffffff; /* Dark Slate */
+  /* font-family: 'Playfair Display', serif; */
+  position: relative; /* This makes sure the ::after is positioned relative to the heading */
+  text-align: center;
+  margin-bottom: 50px; /* Add some space below the heading to avoid content overlap */
 }
 
 .ContactHeading::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    background-color: #FF4500; /* Rust Orange */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px; /* Ensure there's enough margin or padding below the heading */
-    border-radius: 2px;
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #ebcd9b; /* Rust Orange */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px; /* Ensure there's enough margin or padding below the heading */
+  border-radius: 2px;
 }
 
+.ContactFormContainer {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
 
-  
-  .ContactFormContainer {
-    display: flex;
-    gap: 40px;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
-  }
-  
-  .ContactForm {
+/* .ContactForm {
     flex: 1;
     background-color: #ffffff;
     padding: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+  } */
+.ContactForm {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.185); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.InputField,
+.TextArea {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.InputField:focus,
+.TextArea:focus {
+  border-color: #ebcd9b; /* Rust Orange */
+}
+
+.SubmitButton {
+  background-color: #ebcd9b;
+  color: #330708; /* Dark Slate */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.SubmitButton:hover {
+  background-color: #ebcd9b;
+}
+
+.ContactInfo {
+  flex: 1;
+  padding: 30px;
+}
+
+.ContactInfo p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.SocialMedia {
+  display: flex;
+  justify-content: space-between; /* Distributes items with space between them */
+  align-items: center; /* Aligns items along the cross-axis (vertically in most cases) */
+  gap: 15px; /* Optional: Adds gap between items if needed */
+  /* margin-bottom: 30px; */
+  width: 80%;
+  margin: 20px auto;
+}
+
+
+.SocialLink {
+  text-decoration: none;
+  color: #ebcd9b;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.SocialLink:hover {
+  color: #ebcd9b;
+}
+
+.Map {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .ContactFormContainer {
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .InputField,
-  .TextArea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    outline: none;
-    transition: border-color 0.3s ease;
+}
+
+.contact_logos{
+  width: 30px;
+  height: 30px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* background */
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+}
+
+.context {
+  width: 100%;
+  position: absolute;
+  top: 50vh;
+}
+
+.context h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.area {
+  background: #330708;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -200px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
   }
-  
-  .InputField:focus,
-  .TextArea:focus {
-    border-color: #FF4500; /* Rust Orange */
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
   }
-  
-  .SubmitButton {
-    background-color: #FF4500;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .SubmitButton:hover {
-    background-color: #FF7043;
-  }
-  
-  .ContactInfo {
-    flex: 1;
-    padding: 30px;
-  }
-  
-  .ContactInfo p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .SocialMedia {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  
-  .SocialLink {
-    text-decoration: none;
-    color: #FF4500;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  .SocialLink:hover {
-    color: #FF7043;
-  }
-  
-  .Map {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  @media screen and (max-width: 768px) {
-    .ContactFormContainer {
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
-  
+}

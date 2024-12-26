@@ -1,0 +1,88 @@
+/* Main container for work process cards */
+.work_process {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* space between cards */
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Each card will have the same structure */
+/* .work_process_card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(25% - 20px);
+  transition: transform 0.3s ease-in-out;
+} */
+
+/* Card image styling */
+/* .work_process_card_img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+} */
+ /* Each card will have the same structure */
+.work_process_card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 20%; /* Adjust for 4 cards per row */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Align image and text vertically */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center; /* Center all content horizontally */
+    padding: 10px;
+  }
+  
+  /* Card image styling */
+  .work_process_card_img {
+    width: 100%; /* Make the image take full width of the card */
+    max-width: 300px; /* Set a max width to avoid stretching */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover;
+  }
+  
+
+/* Card content styling */
+.work_process_card_data {
+  padding: 15px;
+}
+
+/* Title (h2) styling */
+.work_process_card_data h2 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Paragraph (p) styling */
+.work_process_card_data p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Hover effect for the card */
+.work_process_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .work_process_card {
+    width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .work_process_card {
+    width: 100%; /* 1 card per row on small screens */
+  }
+}
