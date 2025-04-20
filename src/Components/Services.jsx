@@ -1,77 +1,94 @@
 import React from "react";
 import classes from "./Services.module.css";
+import { Link } from "react-router-dom";
 // import servicesImage from "../Assets/camara_man.png";
 
 function Services() {
   return (
     <div className={classes.services}>
-          <div className={classes.absolute}>
-      <div className={classes.heading}>
-        <h1 className={classes.heading_h1}>
-          Services with which we can
-          <br />
-          support you
-        </h1>
-      </div>
-      <div className={classes.main_services}>
-        <div className={classes.row}>
-          <div className={classes.sub_services_div}>
-            {/* <h2 className={classes.card_h2}>Corporate Video</h2> */}
-            <div className={`${classes.btn} ${classes.btn1}`}>
-              <a href="#">
-                <b>Corporate Video</b>
+      <div className={classes.absolute}>
+        <div className={classes.heading}>
+          <h1 className={classes.heading_h1}>
+            Discover the Magic Behind Our Creations
+          </h1>
+        </div>
+        <div className={classes.main_services}>
+          <div className={classes.row}>
+            <div className={classes.sub_services_div}>
+              {/* <div className={`${classes.btn} ${classes.btn1}`}>
+                <Link href="CorporateVideo">
+                  <b>Corporate Video</b>
+                </Link>
+              </div> */}
+              <a href="#" className={classes.btn}>
+                <span>Corporate Video</span>
+                <i></i>
               </a>
+              <p className={classes.card_p}>
+                Transform your brand with our top-tier corporate video
+                production. From bespoke videos and TV commercials to stunning
+                2D/3D animations, motion graphics, and photography, we craft
+                visual stories that captivate and elevate your brand's impact.
+              </p>
             </div>
-            <p className={classes.card_p}>
-              Corporate videos are a powerful tool for businesses to communicate
-              their brand message, showcase their products or services, and
-              engage with their audience.
-            </p>
+            <div className={classes.sub_services_div}>
+              {/* <div className={`${classes.btn} ${classes.btn2}`}>
+                <a href="#">
+                  <b>Product Showcase</b>
+                </a>
+              </div> */}
+              <a href="#" className={classes.btn}>
+                <span>Product Showcase</span>
+                <i></i>
+              </a>
+              <p className={classes.card_p}>
+                Boost your sales with captivating, interactive product demos
+                that showcase your product's excellence. Engage customers
+                effortlessly and drive unmatched conversions with presentations
+                designed to leave a lasting impact and highlight your product's
+                brilliance.
+              </p>
+            </div>
           </div>
-          <div className={classes.sub_services_div}>
-            {/* <h2 className={classes.card_h2}>Product Demo</h2> */}
-            <div className={`${classes.btn} ${classes.btn2}`}>
-              <a href="#">
-                <b>Product Demo</b>
+          <div className={classes.row}>
+            <div className={classes.sub_services_div}>
+              {/* <div className={`${classes.btn} ${classes.btn3}`}>
+                <a href="#">
+                  <b>Commercial</b>
+                </a>
+              </div> */}
+              <a href="#" className={classes.btn}>
+                <span>Commercial</span>
+                <i></i>
               </a>
+              <p className={classes.card_p}>
+                Our commercial video services set new standards, blending
+                cutting-edge innovation with flawless execution. We craft
+                visually stunning stories that captivate, engage, and drive
+                transformative results, ensuring your brand stands out in a
+                competitive market.
+              </p>
             </div>
-            <p className={classes.card_p}>
-              Product demo videos showcase your product's features,
-              functionality, and benefits in action, providing potential
-              customers with a clear understanding and building trust to boost
-              conversions.
-            </p>
+            <div className={classes.sub_services_div}>
+              {/* <div className={`${classes.btn} ${classes.btn4}`}>
+                <a href="#">
+                  <b>Motion Graphics</b>
+                </a>
+              </div> */}
+              <a href="#" className={classes.btn}>
+                <span>Motion Graphics</span>
+                <i></i>
+              </a>
+              <p className={classes.card_p}>
+                Combining precision design with artistic vision, our motion
+                graphics elevate global brands. Using cutting-edge software like
+                After Effects and Cinema 4D, we push creative boundaries,
+                delivering stunning, innovative visuals that leave a lasting
+                impression and set industry standards.
+              </p>
+            </div>
           </div>
         </div>
-        <div className={classes.row}>
-          <div className={classes.sub_services_div}>
-            {/* <h2 className={classes.card_h2}>Commercial</h2> */}
-            <div className={`${classes.btn} ${classes.btn3}`}>
-              <a href="#">
-                <b>Commercial</b>
-              </a>
-            </div>
-            <p className={classes.card_p}>
-              Commercial videos are crafted to promote and market products or
-              services directly, grabbing attention with engaging visuals,
-              storytelling, and a compelling call to action to drive sales or
-              awareness.
-            </p>
-          </div>
-          <div className={classes.sub_services_div}>
-            {/* <h2 className={classes.card_h2}>Motion Graphics</h2> */}
-            <div className={`${classes.btn} ${classes.btn4}`}>
-              <a href="#">
-                <b>Motion Graphics</b>
-              </a>
-            </div>
-            <p className={classes.card_p}>
-              Motion graphics combine visual design and animation to create
-              dynamic and captivating content, perfect for explaining ideas,
-              storytelling, or adding a modern edge to any video production.
-            </p>
-          </div>
-        </div></div>
       </div>
     </div>
   );

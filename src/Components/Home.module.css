@@ -1,263 +1,257 @@
-/* .Home {
-    width: 100%;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .Hero {
-    position: relative;
-    height: 100vh;
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center;
-  }
-  
-  .HeroContent {
-    text-align: center;
-    color: white;
-    z-index: 2;
-    max-width: 800px;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  .Heading {
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-  }
-  
-  .SubHeading {
-    font-size: 1.5rem;
-    margin: 20px 0;
-  }
-  
-  .CTAButton {
-    background-color: #FF4500;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-  }
-  
-  .CTAButton:hover {
-    background-color: #E03E00;
-    transform: scale(1.05);
-  }
-  
-  .ScrollIndicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 30px;
-    height: 50px;
-    border: 2px solid white;
-    border-radius: 50px;
-    transform: translateX(-50%);
-  }
-  
-  .ScrollIndicator::before {
-    content: '';
-    display: block;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    margin: 8px auto;
-    animation: scrollDown 2s infinite;
-  }
-  
-  @keyframes scrollDown {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(15px); opacity: 0; }
-  }
-  
-  .ParallaxSection {
-    height: 60vh;
-    background-image: url('https://media.istockphoto.com/id/1287456867/photo/clear-night-sky-with-milky-way-and-huge-amount-of-stars.jpg?s=612x612&w=0&k=20&c=mX4PtN6zMBVjzukQfWoBuNSnZS48NXxUmGlfxI5tkoE=');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .ParallaxHeading {
-    color: white;
-    font-size: 2.5rem;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  } */
-  
-  /* .About {
-    padding: 50px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .AboutHeading {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .AboutText {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    color: #333;
-  } */
-  
-  /* .LearnMoreButton {
-    padding: 10px 20px;
-    background-color: #FF4500;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .LearnMoreButton:hover {
-    background-color: #E03E00;
-    transform: scale(1.05);
-  } */
-  
-  /* @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-   */
+.ScrollIndicator {
+  /* position: absolute; */
+  bottom: 80px;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #d7d7d7;
+  border-radius: 50px;
+  transform: translateX(-50%);
+  z-index: 5; /* Ensure it's above other elements */
+  overflow: hidden; /* Prevent inner content from overflowing */
+  margin: 25px auto;
+}
+.TotalContainer{
+  position: relative;
+  display: block;
+}
+.ScrollIndicator::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 8px auto;
+  z-index: 5;
+  animation: scrollFadeOut 2.5s infinite;
+}
 
-   .Home {
-    width: 100%;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
+/* Keyframe for fading out while moving down */
+@keyframes scrollFadeOut {
+  0% {
+    transform: translateY(0); /* Start at the top */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: translateY(20px); /* Move down */
+    opacity: 0; /* Partially visible */
+  }
+  100% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+}
+
+.Home {
+  width: 100%;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+}
+
+.Hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.HeroVideoContainer {
+  position: absolute; /* Changed to absolute to make it act as a true background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.HeroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.HeroVideoContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Above the video */
+  background: linear-gradient(
+    to bottom,
+    rgba(51, 7, 8, 0) 50%,
+    /* rgba(51, 7, 8, 0.7) 75%, */
+    rgba(51, 7, 8, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.HeroContent {
+  position: relative; /* Keeps it above the video and gradient */
+  text-align: center;
+  color: white;
+  z-index: 3; /* Stays on top of both the video and gradient */
+  max-width: 800px;
+  animation: fadeIn 2s ease-in-out;
+  padding-top: 200px;
+}
+
+/* .Heading {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 20px 0;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
   }
   
-  .Hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  to {
+    -webkit-mask-position: -50%;
   }
+} */
+.Heading {
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 20px 0;
+
+  mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+  mask-size: 200%;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+  -webkit-mask-size: 200%;
   
-  .HeroVideo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+  animation: shine 2s infinite;
+  -webkit-animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  from {
+    mask-position: 150%;
+    -webkit-mask-position: 150%;
   }
-  
-  .HeroContent {
-    position: relative;
-    text-align: center;
-    color: white;
-    z-index: 2;
-    max-width: 800px;
-    animation: fadeIn 2s ease-in-out;
+  to {
+    mask-position: -50%;
+    -webkit-mask-position: -50%;
   }
-  
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+/* .SubHeading {
+  font-size: 1.5rem;
+  margin: 20px 0;
+} */
+
+/* .CTAButton {
+  background-color: #ebcd9b;
+  color: #330708;
+  padding: 12px 24px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
+} */
+
+/* .CTAButton:hover {
+  background-color: #ebce9bbd;
+  transform: scale(1.05);
+} */
+
+.ParallaxSection {
+  height: 60vh;
+  background-image: url("https://media.istockphoto.com/id/1287456867/photo/clear-night-sky-with-milky-way-and-huge-amount-of-stars.jpg?s=612x612&w=0&k=20&c=mX4PtN6zMBVjzukQfWoBuNSnZS48NXxUmGlfxI5tkoE=");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ParallaxHeading {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 610px) {
   .Heading {
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-    font-weight: bold;
+    font-size: 2rem;
   }
-  
-  .SubHeading {
-    font-size: 1.5rem;
-    margin: 20px 0;
-  }
-  
-  .CTAButton {
-    background-color: #FF4500;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-  }
-  
-  .CTAButton:hover {
-    background-color: #E03E00;
-    transform: scale(1.05);
-  }
-  
-  .ScrollIndicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 30px;
-    height: 50px;
-    border: 2px solid white;
-    border-radius: 50px;
-    transform: translateX(-50%);
-  }
-  
-  .ScrollIndicator::before {
-    content: '';
-    display: block;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    margin: 8px auto;
-    animation: scrollDown 2s infinite;
-  }
-  
-  @keyframes scrollDown {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(15px);
-      opacity: 0;
-    }
-  }
-  
-  .ParallaxSection {
-    height: 60vh;
-    background-image: url('https://media.istockphoto.com/id/1287456867/photo/clear-night-sky-with-milky-way-and-huge-amount-of-stars.jpg?s=612x612&w=0&k=20&c=mX4PtN6zMBVjzukQfWoBuNSnZS48NXxUmGlfxI5tkoE=');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .ParallaxHeading {
-    color: white;
-    font-size: 2.5rem;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.container a {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  color: #f4f4f4;
+  text-transform: uppercase;
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px solid #ebce9bbd;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px #ebce9bbd;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    #ebce9bbd,
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+

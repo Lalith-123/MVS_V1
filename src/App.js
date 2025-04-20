@@ -8,6 +8,8 @@ import Contact from "./Components/Contact";
 import Services from "./Components/Services";
 import Brands from "./Components/Brands";
 import WorkProcess from "./Components/WorkProcess";
+import Testimonial from "./Components/Testimonial";
+import Footer from "./Components/Footer";
 
 function App() {
   // Create refs for each section
@@ -16,7 +18,7 @@ function App() {
   const myWorksRef = useRef(null);
   const contactRef = useRef(null);
   const servicesRef = useRef(null);
-  const brandsRef = useRef(null);
+  // const brandsRef = useRef(null);
 
   // Function to scroll to the section
   const scrollToSection = (ref) => {
@@ -31,18 +33,21 @@ function App() {
         scrollToMyWorks={() => scrollToSection(myWorksRef)}
         scrollToContact={() => scrollToSection(contactRef)}
         scrollToServices={() => scrollToSection(servicesRef)}
-        scrollToBrands={() => scrollToSection(brandsRef)}
+        // scrollToBrands={() => scrollToSection(brandsRef)}
       />
 
       <div ref={homeRef}>
-        <Home />
-      </div>
-      <div ref={brandsRef}>
-        <Brands />
+        <Home
+          scrollToServices={() => scrollToSection(servicesRef)}
+          // scrollToBrands={() => scrollToSection(brandsRef)}
+        />
       </div>
       <div ref={aboutRef}>
         <About />
       </div>
+      {/* <div ref={brandsRef}>
+        <Brands />
+      </div> */}
       <div ref={servicesRef}>
         <Services />
       </div>
@@ -52,14 +57,15 @@ function App() {
       <div ref={myWorksRef}>
         <MyWorks />
       </div>
-
+      {/* <div>
+        <Testimonial />
+      </div> */}
       <div ref={contactRef}>
         <Contact />
       </div>
-      {/* <div><Home/></div> */}
-      {/* <div><About/></div> */}
-      {/* <div><MyWorks/></div> */}
-      {/* <div><Contact/></div> */}
+      <div>
+        <Footer/>
+      </div>
     </div>
   );
 }

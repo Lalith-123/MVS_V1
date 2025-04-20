@@ -1,0 +1,42 @@
+.container {
+  position: relative; /* Ensures that subsequent elements can stack correctly */
+}
+
+.image_div {
+  position: fixed; /* Fixes the background image */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretches the image to cover the full width */
+  height: 80px; /* Covers the entire viewport height */
+  background: url("../Assets/MVS_LOGO.jpg") no-repeat center center / cover;
+  z-index: -1; /* Pushes it behind the scrollable content */
+}
+
+.image{
+    width: 100%;
+}
+
+.CorporateVideo {
+  display: flex;
+  flex-wrap: wrap; /* Allows videos to wrap to the next row */
+  justify-content: center; /* Center-aligns the video rows */
+  gap: 20px; /* Spacing between videos */
+  padding: 20px; /* Padding around videos */
+  margin-top: 500px; /* Starts the content below the full-height image */
+  background-color: #f9f9f9; /* Optional: Page background color */
+}
+
+.video_div {
+  flex: 1 1 calc(33.33% - 20px); /* Each video takes one-third of the row minus spacing */
+  max-width: calc(33.33% - 20px);
+  box-sizing: border-box;
+  /* height: 300px; */
+}
+
+.video {
+  width: 100%; /* Make videos responsive */
+  height: 275px;
+  border: 2px solid #ccc; /* Optional: Adds a border */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}

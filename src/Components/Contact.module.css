@@ -13,16 +13,9 @@
   margin: auto;
 }
 
-/* .ContactHeading {
-    font-size: 36px;
-    color: #2F4F4F;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 40px;
-  } */
 .ContactHeading {
   font-size: 36px;
   color: #ffffff; /* Dark Slate */
-  /* font-family: 'Playfair Display', serif; */
   position: relative; /* This makes sure the ::after is positioned relative to the heading */
   text-align: center;
   margin-bottom: 50px; /* Add some space below the heading to avoid content overlap */
@@ -48,13 +41,6 @@
   justify-content: space-between;
 }
 
-/* .ContactForm {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  } */
 .ContactForm {
   flex: 1;
   background-color: rgba(255, 255, 255, 0.185); /* Semi-transparent white */
@@ -62,10 +48,10 @@
   padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  margin: 0px 20px;
 }
 
-.InputField,
-.TextArea {
+.InputField {
   width: 90%;
   padding: 15px;
   margin-bottom: 20px;
@@ -75,10 +61,10 @@
   color: #333;
   outline: none;
   transition: border-color 0.3s ease;
+  font-family: "Exo", sans-serif;
 }
 
-.InputField:focus,
-.TextArea:focus {
+.InputField:focus {
   border-color: #ebcd9b; /* Rust Orange */
 }
 
@@ -113,8 +99,7 @@
   justify-content: space-between; /* Distributes items with space between them */
   align-items: center; /* Aligns items along the cross-axis (vertically in most cases) */
   gap: 15px; /* Optional: Adds gap between items if needed */
-  /* margin-bottom: 30px; */
-  width: 80%;
+  width: 50%;
   margin: 20px auto;
 }
 
@@ -134,13 +119,6 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 768px) {
-  .ContactFormContainer {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 
 .contact_logos{
@@ -178,9 +156,9 @@ body {
 
 .area {
   background: #330708;
-  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8); */
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   position: relative;
 }
 
@@ -287,8 +265,112 @@ body {
   }
 
   100% {
-    transform: translateY(-1000px) rotate(720deg);
+    transform: translateY(-1500px) rotate(720deg);
     opacity: 0;
     border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 1075px) and (min-width: 768px) {
+  .ContactFormContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ContactForm {
+    width: 60%;
+    margin: auto;
+  }
+
+  .ContactInfo {
+    width: 60%;
+    margin: auto;
+    height: auto;
+  }
+
+  .area {
+    height: 1100px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 650px) {
+  .ContactFormContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ContactForm {
+    width: 70%;
+    margin: auto;
+  }
+
+  .ContactInfo {
+    width: 70%;
+    margin: auto;
+  }
+
+  .area {
+    height: 1100px;
+  }
+}
+
+@media screen and (max-width: 650px) and (min-width: 420px) {
+  .ContactFormContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact_logos{
+    width: 25px;
+    height: 25px;
+  }
+
+  .ContactForm {
+    width: 80%;
+    margin: auto;
+  }
+
+  .ContactInfo {
+    width: 80%;
+    margin: auto;
+  }
+
+  .area {
+    height: 1100px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .ContactFormContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ContactForm {
+    width: 300px;
+    margin: auto;
+  }
+
+  .ContactInfo {
+    width: 300px;
+    margin: auto;
+    padding: 5px;
+  }
+
+  .contact_logos{
+    width: 25px;
+    height: 25px;
+  }
+
+  .area {
+    height: 1100px;
+  }
+
+  .SocialMedia{
+    margin: 20px auto;
+  }
+
+  .Map{
+    width: 300px;
   }
 }

@@ -1,63 +1,88 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 50px;
-    background-color: #330708; /* Dark Slate */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    width: 70px;
-    height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  background-color: #330708; /* Dark Slate */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 150px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  /* height: auto; */
+  /* margin: auto 0px; */
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  background-color: transparent;
+  color: #ffffff; /* White */
+  border: 2px solid transparent;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.button:hover {
+  border-color: #ebcd9b; /* Rust Orange */
+  color: #ebcd9b;
+  background-color: rgba(255, 69, 0, 0.1); /* Slight orange tint */
+  border-radius: 15px;
+}
+
+.anotherButton {
+  border-color: #ebcd9b; /* Rust Orange */
+  color: #ebcd9b;
+  background-color: rgba(255, 69, 0, 0.1); /* Slight orange tint */
+  /* border-radius: 30px; */
+  border-radius: 15px;
+}
+
+.button:active {
+  background-color: #ebcd9b; /* Rust Orange */
+  color: #ffffff;
+}
+
+.menu_visible {
+  display: flex !important; /* Overrides the 'display: none' on small screens */
+  flex-direction: column;
+  gap: 15px;
+  background-color: #330708; /* Dark background for mobile menu */
+  padding: 10px;
+  position: absolute;
+  top: 80px; /* Adjust based on header height */
+  right: 30px; /* Adjust for proper alignment */
+  border-radius: 10px;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.menu_btn{
+  display: none;
+  background-color: #330708;
+  border: 0;
+}
+
+@media screen and (max-width: 950px) {
+  .menu_btn{
+    display: block;
   }
 
-  .logo img {
-    width: 100%;
-    height: auto;
-  }
-  
   .menu {
-    display: flex;
-    gap: 20px;
+    display: none;
   }
-  
-  .button {
-    background-color: transparent;
-    color: #FFFFFF; /* White */
-    border: 2px solid transparent;
-    font-size: 16px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .button:hover {
-    border-color: #FF4500; /* Rust Orange */
-    color: #FF4500;
-    background-color: rgba(255, 69, 0, 0.1); /* Slight orange tint */
-  }
-  
-  .button:active {
-    background-color: #FF4500; /* Rust Orange */
-    color: #FFFFFF;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      padding: 20px;
-    }
-    
-    .menu {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-  
-    .logo {
-      margin-bottom: 10px;
-    }
-  }
-  
+}

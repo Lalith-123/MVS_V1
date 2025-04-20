@@ -1,9 +1,5 @@
-.my_works {
-  /* background-color: #330708; */
-}
-
 .container {
-  padding: 50px 0px;
+  padding: 0px 0px 50px 0px;
 }
 
 .row {
@@ -37,4 +33,96 @@
 .h2 {
   color: #ffffff;
   margin: 0; /* Remove default margin */
+}
+
+@media screen and (max-width: 1250px) and (min-width: 1050px) {
+  .row {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 950px) {
+  .row {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 950px) and (min-width: 850px) {
+  .row {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 850px) and (min-width: 600px) {
+  /* .row {
+    flex-direction: column;
+    gap: 30px;
+  } */
+  .row {
+    width: 90%;
+  }
+
+  .logo_div {
+    width: 170px;
+    height: 170px;
+  }
+
+  .h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* .row {
+    flex-direction: column;
+    gap: 30px;
+  } */
+  .row {
+    width: 95%;
+  }
+
+  .logo_div {
+    width: 150px;
+    height: 150px;
+  }
+
+  .h2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* .row {
+    flex-direction: column;
+    gap: 30px;
+  } */
+  .row {
+    width: 95%;
+  }
+
+  .logo_div {
+    width: 110px;
+    height: 110px;
+  }
+
+  .h2 {
+    font-size: 11px;
+  }
+}
+
+.my_works_title {
+  text-align: center;
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: #333; /* Dark gray for a professional look */
+  margin: 20px auto; /* Adds spacing */
+  padding: 10px;
+  display: flex; /* Makes it easier to center in a flex container */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  line-height: 1.2; /* Improves readability */
+  /* background: linear-gradient(90deg, #4e9aff, #00d4ff); Subtle gradient for elegance */
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: fit-content; /* Ensures the box wraps snugly around the text */
 }

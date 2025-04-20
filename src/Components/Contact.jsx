@@ -14,6 +14,7 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -28,19 +29,26 @@ function Contact() {
     // Add your EmailJS service ID, template ID, and user ID here
     emailjs
       .send(
-        "service_fqfpl45", // Replace with your EmailJS service ID
-        "template_fl95yyo", // Replace with your EmailJS template ID
+        "service_8egjzx8", // Replace with your EmailJS service ID
+        "template_g1roank", // Replace with your EmailJS template ID
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          email: formData.email,
+          number: formData.phone,
           message: formData.message,
         },
-        "sjyH_6cTVbpsnkvxx" // Replace with your EmailJS user ID
+        "cnTwa_OQWQuy2jYeQ" // Replace with your EmailJS user ID
       )
       .then(
         (result) => {
           console.log("Email sent successfully!", result.text);
           alert("Thank you for your message!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
         },
         (error) => {
           console.log("Failed to send email", error.text);
@@ -67,13 +75,13 @@ function Contact() {
           </ul>
         </div>
         <div className={classes.absolute}>
-          <h1 className={classes.ContactHeading}>Contact Me</h1>
+          <h1 className={classes.ContactHeading}>Contact Us</h1>
           <div className={classes.ContactFormContainer}>
             <form onSubmit={handleSubmit} className={classes.ContactForm}>
               <input
                 type="text"
                 name="name"
-                placeholder="Your Name"
+                placeholder="Company name"
                 value={formData.name}
                 onChange={handleChange}
                 className={classes.InputField}
@@ -82,23 +90,32 @@ function Contact() {
               <input
                 type="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder="Your email"
                 value={formData.email}
+                onChange={handleChange}
+                className={classes.InputField}
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your phone number"
+                value={formData.phone}
                 onChange={handleChange}
                 className={classes.InputField}
                 required
               />
               <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder="Project brief"
                 value={formData.message}
                 onChange={handleChange}
-                className={classes.TextArea}
+                className={classes.InputField}
                 rows="5"
                 required
               ></textarea>
               <button type="submit" className={classes.SubmitButton}>
-                <b>Send Message</b>
+                <b>Submit</b>
               </button>
             </form>
             <div className={classes.ContactInfo}>
@@ -120,22 +137,22 @@ function Contact() {
                 >
                   <img src={instagram} className={classes.contact_logos} />
                 </a>
-                <a
+                {/* <a
                   href="uptouandhra@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.SocialLink}
                 >
                   <img src={mail} className={classes.contact_logos} />
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.SocialLink}
                 >
                   <img src={linkedin} className={classes.contact_logos} />
-                </a>
+                </a> */}
                 {/* </div>
               <div className={classes.SocialMedia}> */}
                 <a
@@ -146,7 +163,7 @@ function Contact() {
                 >
                   <img src={youtube} className={classes.contact_logos} />
                 </a>
-                <a
+                {/* <a
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
@@ -169,17 +186,17 @@ function Contact() {
                   className={classes.SocialLink}
                 >
                   <img src={x} className={classes.contact_logos} />
-                </a>
+                </a> */}
               </div>
               <div className={classes.Map}>
                 <iframe
-                  title="Map"
-                  src="https://www.google.com/maps/place/15%C2%B050'07.6%22N+78%C2%B001'30.3%22E/@15.8354504,78.0224997,17z/data=!3m1!4b1!4m4!3m3!8m2!3d15.8354504!4d78.0250746?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3838.4020918217507!2d78.02249967513094!3d15.835450384810704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1735224846813!5m2!1sen!2sin"
                   width="100%"
                   height="250"
-                  frameBorder="0"
                   style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
                   aria-hidden="false"
                   tabIndex="0"
                 ></iframe>

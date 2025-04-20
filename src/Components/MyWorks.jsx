@@ -19,6 +19,7 @@ import d_animation from "../Assets/d_animation.png";
 function MyWorks() {
   return (
     <div className={classes.my_works}>
+      <div className={classes.my_works_title}>Our Expertise</div>
       <div className={classes.container}>
         <div className={classes.row}>
           <div className={classes.logo_div}>

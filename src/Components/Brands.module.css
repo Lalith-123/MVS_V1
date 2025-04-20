@@ -3,7 +3,6 @@
 :root {
   --marquee-width: 80vw;
   --marquee-height: 70px;
-  /* --marquee-elements: 7; */ /* Will be dynamically updated via JS */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
   --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
@@ -15,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
 }
 
 .marquee {
