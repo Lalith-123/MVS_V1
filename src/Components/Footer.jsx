@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div style={{ textAlign: 'center', padding: '10px 0', background: '#330708' }}>
       <p style={{ color: '#ebcd9b' }}>
-        &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
+        &copy; {new Date().getFullYear()} UP2U. All rights reserved.
       </p>
       <Link
         to="/PrivacyPolicy"

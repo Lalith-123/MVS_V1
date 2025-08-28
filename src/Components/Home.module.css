@@ -132,7 +132,7 @@
   -webkit-mask-size: 200%;
   
   animation: shine 2s infinite;
-  -webkit-animation: shine 3s infinite;
+  -webkit-animation: shine 1.5s infinite;
 }
 
 @keyframes shine {

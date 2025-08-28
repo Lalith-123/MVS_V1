@@ -64,9 +64,24 @@
   text-transform: uppercase;
   font-size: 1.5em;
   letter-spacing: 0.1em;
-  padding: 10px 10px;
   transition: 0.5s;
   text-decoration: none;
+}
+
+.btn1 {
+  padding: 10px 29.45px;
+}
+
+.btn2 {
+  padding: 10px 10.9px;
+}
+
+.btn3 {
+  padding: 10px 33.68px;
+}
+
+.btn4 {
+  padding: 10px 29.42px;
 }
 
 .btn:hover {
@@ -194,6 +209,22 @@
   }
   .btn {
     font-size: 1rem;
+  }
+
+  .btn1 {
+    padding: 10px 24.638px;
+  }
+
+  .btn2 {
+    padding: 10px 12.27px;
+  }
+
+  .btn3 {
+    padding: 10px 27.45px;
+  }
+
+  .btn4 {
+    padding: 10px 24.62px;
   }
 }
 

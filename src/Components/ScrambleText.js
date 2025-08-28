@@ -7,7 +7,7 @@ const ScrambleText = ({ text, className, trigger }) => {
     if (!trigger) return;
 
     const theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-1234567890";
-    const speed = 50;
+    const speed = 15;
     const increment = 8;
 
     let si = 0;

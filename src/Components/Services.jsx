@@ -20,10 +20,13 @@ function Services() {
                   <b>Corporate Video</b>
                 </Link>
               </div> */}
-              <a href="#" className={classes.btn}>
-                <span>Corporate Video</span>
+              <Link
+                to="/CorporateFilms"
+                className={`${classes.btn} ${classes.btn1}`}
+              >
+                <span>Corporate Films</span>
                 <i></i>
-              </a>
+              </Link>
               <p className={classes.card_p}>
                 Transform your brand with our top-tier corporate video
                 production. From bespoke videos and TV commercials to stunning
@@ -37,7 +40,7 @@ function Services() {
                   <b>Product Showcase</b>
                 </a>
               </div> */}
-              <a href="#" className={classes.btn}>
+              <a href="#" className={`${classes.btn} ${classes.btn2}`}>
                 <span>Product Showcase</span>
                 <i></i>
               </a>
@@ -57,8 +60,8 @@ function Services() {
                   <b>Commercial</b>
                 </a>
               </div> */}
-              <a href="#" className={classes.btn}>
-                <span>Commercial</span>
+              <a href="#" className={`${classes.btn} ${classes.btn3}`}>
+                <span>Commercial Ads</span>
                 <i></i>
               </a>
               <p className={classes.card_p}>
@@ -75,7 +78,7 @@ function Services() {
                   <b>Motion Graphics</b>
                 </a>
               </div> */}
-              <a href="#" className={classes.btn}>
+              <a href="#" className={`${classes.btn} ${classes.btn4}`}>
                 <span>Motion Graphics</span>
                 <i></i>
               </a>

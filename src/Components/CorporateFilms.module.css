@@ -1,0 +1,67 @@
+.mainDiv {
+  display: flex;
+  justify-content: space-between; /* creates equal spacing between items */
+  padding: 0px 30px;
+  background-color: #f0f0f0;
+}
+
+.subDiv {
+  width: 25%; /* each subDiv takes 20% of the total width */
+  background-color: #f0f0f0; /* optional: just for visual testing */
+  text-align: center; /* optional: center the text */
+  padding: 10px; /* optional: inner spacing */
+  box-sizing: border-box; /* ensures padding doesn't increase width */
+}
+
+.subDiv video {
+  /* padding: 0 0 15px 0; */
+}
+
+.video video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video .image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px; /* Adjust as needed */
+  pointer-events: none; /* Let clicks go through to the video */
+}
+
+.subDiv div {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 20px solid #f0f0f0;
+  position: relative;
+}
+
+.subDiv img {
+  /* transition: transform 0.5s ease; */
+  display: block;
+  width: 100%;
+}
+
+/* Zoom in */
+/* .subDiv img:hover {
+  transform: scale(1.05); 
+} */
+
+@media (max-width: 1100px) {
+  .subDiv {
+    width: 33.3%;
+  }
+}
+@media (max-width: 750px) {
+  .subDiv {
+    width: 50%;
+  }
+}
+@media (max-width: 450px) {
+  .subDiv {
+    width: 100%;
+  }
+}

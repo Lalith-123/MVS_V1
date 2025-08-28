@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import CorporateVideo from './Components/CorporateVideo';
+import CorporateFilms from './Components/CorporateFilms';
 import reportWebVitals from './reportWebVitals';
 import PrivacyPolicy from './Components/PrivacyPolicy';
 
@@ -13,7 +13,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route index element={<App />} /> {/* Default Route */}
-      <Route path="CorporateVideo" element={<CorporateVideo />} />
+      <Route path="CorporateFilms" element={<CorporateFilms />} />
       <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
     </Routes>
   </BrowserRouter>
