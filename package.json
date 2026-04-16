@@ -1,5 +1,5 @@
 {
-  "homepage": "/",
+  "homepage": "https://lalith-123.github.io/MVS_V1",
   "name": "mvs",
   "version": "0.1.0",
   "private": true,
@@ -46,6 +46,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.3.0"
   }
 }
